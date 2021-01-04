@@ -10,6 +10,7 @@ export default createGlobalStyle`
   html {
     max-height: 100%;
     background: var(--primary);
+    font-size: 16px;
   }
 
   *, button, input {
@@ -50,5 +51,23 @@ export default createGlobalStyle`
     --javascript: #f1e05a;
     --typescript: #2b7489;
     --other-language: #8257e5;
+  }
+
+  @media(max-width: 760px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  @media(max-width: 320px) {
+    html {
+      font-size: 12px;
+    }
+  }
+
+  @media(max-width: 280px) {
+    html {
+      font-size: 10px;
+    }
   }
 `;
