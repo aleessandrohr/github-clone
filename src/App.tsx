@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header/index';
 import Routes from './pages/routes';
 //import Footer from './components/Footer/index';
+import GlobalStyles from './styles/GlobalStyles';
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
       <Routes />
 
       {/*<Footer />*/}
+
+      <GlobalStyles />
     </Router>
   );
 }
