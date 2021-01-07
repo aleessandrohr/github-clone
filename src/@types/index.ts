@@ -3,7 +3,6 @@ export interface APIUser {
   name: string;
   followers: number;
   following: number;
-  public_repos: number;
   avatar_url: string;
   location?: string;
   company?: string;
@@ -13,12 +12,9 @@ export interface APIUser {
 
 export interface APIRepo {
   name: string;
-  owner: {
-    login: string;
-  }
-  stargazer_count: number;
-  forks: number;
   html_url: string;
-  language?: string;
   description?: string;
+  language?: string;
+  stargazers_count: number;
+  forks: number;
 }
