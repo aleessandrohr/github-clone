@@ -27,7 +27,7 @@ export const Flex = styled.div`
     }
 
     > h2 {
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: var(--username);
       font-weight: 300;
     }
@@ -50,6 +50,7 @@ export const Avatar = styled.img`
 
   @media (min-width: 768px) {
     width: 80%;
+    margin-top: -34px;
   }
 `;
 
@@ -57,6 +58,7 @@ export const Row = styled.ul`
   display: flex;
   align-items: center;
   margin: 20px 0;
+  flex-wrap: wrap;
 
   > li {
     display: flex;
@@ -74,7 +76,7 @@ export const Row = styled.ul`
 `;
 
 export const PeopleIcon = styled(RiGroupLine)`
- ${iconCSS} 
+ ${iconCSS}
 `;
 
 export const Column = styled.ul`
