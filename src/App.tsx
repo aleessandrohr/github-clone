@@ -1,5 +1,8 @@
-import React from 'react';
+import 'react-calendar-heatmap/dist/styles.css';
+
+import React, { useState } from 'react';
 import { BrowserRouter as Router, } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
 import Header from './components/Header/index';
 import Routes from './pages/routes';
@@ -7,12 +10,17 @@ import Routes from './pages/routes';
 
 // import { Container } from './styles';
 import GlobalStyles from './styles/GlobalStyles';
+import { ThemeName, themes } from './styles/Themes';
 
 const App: React.FC = () => {
-  return(
-    <Router>
+  const [themeName, setThemeName] = useState<ThemeName>('light');
+  const currentTheme = themes[themeName];
 
-      <Header />
+  return(
+    <ThemeProvider theme={currentTheme}>
+      <Router>
+
+      <Header themeName={themeName} setThemeName={setThemeName} />
 
       <Routes />
 
@@ -20,7 +28,8 @@ const App: React.FC = () => {
 
       <GlobalStyles />
 
-    </Router>
+      </Router>
+    </ThemeProvider>
   );
 }
 
