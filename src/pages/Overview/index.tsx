@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-
 import ProfileData from '../../components/ProfileData/index';
 import OverviewCard from '../../components/OverviewCard/index';
 import RandomCalendar from '../../components/RandomCalendar/index';
