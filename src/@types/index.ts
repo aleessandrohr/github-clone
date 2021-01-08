@@ -10,7 +10,7 @@ export interface APIUser {
   blog?: string;
 }
 
-export interface APIRepo {
+export interface APIRepository {
   name: string;
   html_url: string;
   description?: string;
