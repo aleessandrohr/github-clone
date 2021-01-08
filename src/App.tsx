@@ -8,7 +8,7 @@ import { ThemeName, themes } from './styles/Themes';
 
 import Header from './components/Header/index';
 import Routes from './pages/routes';
-//import Footer from './components/Footer/index';
+import Footer from './components/Footer/index';
 
 // import { Container } from './styles';
 import GlobalStyles from './styles/GlobalStyles';
@@ -26,7 +26,7 @@ const App: React.FC = () => {
 
         <Routes />
 
-        {/*<Footer /> */}
+        <Footer />
 
         <GlobalStyles />
       </Router>
