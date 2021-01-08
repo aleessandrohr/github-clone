@@ -12,6 +12,7 @@ export const Container = styled.div`
   }
 
   > div {
+    
     > p {
       font-size: 2rem;
     }
