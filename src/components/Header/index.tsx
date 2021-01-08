@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Container, GitHubLogo, Search } from './styles';
 import  { ThemeName } from '../../styles/Themes';
+
+import { Container, GitHubLogo, Search } from './styles';
 
 interface Props {
   themeName: ThemeName;
@@ -20,8 +21,7 @@ const Header: React.FC<Props> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    navigate(`${search.toLowerCase().trim()}`);
+    navigate(`/${search.toLowerCase().trim()}`);
   }
 
   const toggleTheme = () => {
