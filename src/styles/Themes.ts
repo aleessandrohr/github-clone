@@ -19,6 +19,9 @@ export const themes = {
 
     javascript: '#f1e05a',
     typescript: '#2b7489',
+    python: '#3572A5',
+    html: '#e34c26',
+    css: '#563d7c',
     'other-language': '#8257e5',
   },
   dark: {
@@ -41,6 +44,9 @@ export const themes = {
 
     javascript: '#f1e05a',
     typescript: '#2b7489',
+    python: '#3572A5',
+    html: '#e34c26',
+    css: '#563d7c',
     'other-language': '#8257e5',
   },
 };
