@@ -1,6 +1,6 @@
 <p align="center">
-    <img src="https://img.shields.io/github/license/alessandrohenriqueramos/github-clone?color=000" alt="license"/>
-    <img src="https://img.shields.io/github/package-json/v/alessandrohenriqueramos/github-clone?color=000" alt="version">
+    <img src="https://img.shields.io/github/license/alessandroramos13/github-clone?color=000" alt="license"/>
+    <img src="https://img.shields.io/github/package-json/v/alessandroramos13/github-clone?color=000" alt="version">
 </p>
 
 # GitHub Clone
@@ -32,7 +32,7 @@ Com essas aplicações instaladas, abra o cmd ou o powershell (dependendo do sis
 ## Execute
 
 ```
-git clone https://github.com/alessandrohenriqueramos/github-clone.git
+git clone https://github.com/alessandroramos13/github-clone.git
 cd github-clone
 ```
 
