@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useParams, Link } from "react-router-dom";
 
-import { getUser } from "../../api/GitHub";
-
-import { APIUser } from "../../@types";
-
-import ProfileData from "../../components/ProfileData/index";
 import Error404 from "../../components/Error404/index";
+import ProfileData from "../../components/ProfileData/index";
+
+import { getUser } from "../../api/github";
+
+import { APIUser } from "../../types";
 
 import { Container, Main, LeftSide, RightSide, Tab } from "./styles";
 
@@ -16,13 +16,13 @@ interface Data {
 }
 
 const Profile: React.FC = () => {
-
   const [data, setData] = useState<Data>();
   const { username } = useParams();
 
   useEffect(() => {
     const get = async () => {
-      let user = await getUser(username);
+      const user = await getUser(username);
+
       if (user === `Error 404`) {
         setData({ error: true });
       } else {
@@ -43,20 +43,34 @@ const Profile: React.FC = () => {
     return <div />;
   }
 
-  let location = window.location.href.split("/")[4];
+  const location = window.location.href.split("/")[4];
 
   return (
     <Container>
       <Tab className="desktop">
         <div className="wrapper">
           <span className="offset" />
-          <div style={{ borderBottom: location ? "" : "2px solid var(--orange)"}} className="content">
-            <Link style={{ cursor: "pointer" }} className="label" to={`/${username}`}>
+          <div
+            style={{ borderBottom: location ? "" : "2px solid var(--orange)" }}
+            className="content"
+          >
+            <Link
+              style={{ cursor: "pointer" }}
+              className="label"
+              to={`/${username}`}
+            >
               Overview
             </Link>
           </div>
-          <div style={{ borderBottom: location ? "2px solid var(--orange)" : "" }} className="content">
-            <Link style={{ cursor: "pointer" }} className="label" to={`/${username}/repositories`}>
+          <div
+            style={{ borderBottom: location ? "2px solid var(--orange)" : "" }}
+            className="content"
+          >
+            <Link
+              style={{ cursor: "pointer" }}
+              className="label"
+              to={`/${username}/repositories`}
+            >
               Repositories
             </Link>
           </div>
@@ -79,14 +93,32 @@ const Profile: React.FC = () => {
         </LeftSide>
         <RightSide>
           <Tab className="mobile">
-            <div style={{ display: 'flex' }}>
-              <div style={{ borderBottom: location ? "" : "2px solid var(--orange)", }} className="content">
-                <Link style={{ cursor: "pointer" }} className="label" to={`/${username}`}>
+            <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  borderBottom: location ? "" : "2px solid var(--orange)",
+                }}
+                className="content"
+              >
+                <Link
+                  style={{ cursor: "pointer" }}
+                  className="label"
+                  to={`/${username}`}
+                >
                   Overview
                 </Link>
               </div>
-              <div style={{ borderBottom: location ? "2px solid var(--orange)" : "", }} className="content">
-                <Link style={{ cursor: "pointer" }} className="label" to={`/${username}/repositories`}>
+              <div
+                style={{
+                  borderBottom: location ? "2px solid var(--orange)" : "",
+                }}
+                className="content"
+              >
+                <Link
+                  style={{ cursor: "pointer" }}
+                  className="label"
+                  to={`/${username}/repositories`}
+                >
                   Repositories
                 </Link>
               </div>

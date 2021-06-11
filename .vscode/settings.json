@@ -1,0 +1,18 @@
+{
+  "cSpell.words": [
+    "Helvetica",
+    "Segoe",
+    "alessandroramos",
+    "browserslist",
+    "builtins",
+    "camelcase",
+    "heatmap",
+    "nowrap",
+    "paren"
+  ],
+  "material-icon-theme.folders.associations": {
+    "types": "typescript",
+    "enums": "typescript",
+    "interfaces": "typescript"
+  }
+}
