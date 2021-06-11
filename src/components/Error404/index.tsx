@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 const Error404: React.FC = () => {
-  return(
+  return (
     <Container>
       <h1>Error 404</h1>
       <div>
@@ -11,6 +11,6 @@ const Error404: React.FC = () => {
       </div>
     </Container>
   );
-}
+};
 
 export default Error404;

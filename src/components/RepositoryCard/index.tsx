@@ -1,6 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import { Container, TopSide, RepositoryIcon, BotSide, StarIcon, ForkIcon } from './styles';
+import {
+  Container,
+  TopSide,
+  RepositoryIcon,
+  BotSide,
+  StarIcon,
+  ForkIcon,
+} from "./styles";
 
 interface Props {
   repositoryName: string;
@@ -8,7 +15,7 @@ interface Props {
   description?: string;
   language?: string;
   stars: number;
-  forks: number
+  forks: number;
 }
 
 const RepositoryCard: React.FC<Props> = ({
@@ -19,15 +26,16 @@ const RepositoryCard: React.FC<Props> = ({
   stars,
   forks,
 }) => {
+  const languageClass = language ? language.toLowerCase() : "other";
 
-  const languageClass = language ? language.toLowerCase() : 'other';
-
-  return(
+  return (
     <Container>
       <TopSide>
         <header>
           <RepositoryIcon />
-            <a href={html_url} target='_blank' rel="noreferrer">{repositoryName}</a>
+          <a href={html_url} target="_blank" rel="noreferrer">
+            {repositoryName}
+          </a>
         </header>
         <section>
           <p>{description}</p>
@@ -37,7 +45,7 @@ const RepositoryCard: React.FC<Props> = ({
         <ul>
           <li>
             <div className={`language ${languageClass}`}></div>
-            <span>{language ? language : 'Other'}</span>
+            <span>{language ? language : "Other"}</span>
           </li>
           <li>
             <StarIcon />
@@ -51,6 +59,6 @@ const RepositoryCard: React.FC<Props> = ({
       </BotSide>
     </Container>
   );
-}
+};
 
 export default RepositoryCard;

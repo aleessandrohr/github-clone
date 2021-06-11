@@ -1,15 +1,15 @@
-import React from 'react';
-import Heatmap from 'react-calendar-heatmap';
-import { subYears } from 'date-fns';
+import React from "react";
+import Heatmap from "react-calendar-heatmap";
 
-import { Container } from './styles';
+import { subYears } from "date-fns";
+
+import { Container } from "./styles";
 
 const RandomCalendar: React.FC = () => {
-
   const startDate = subYears(new Date(), 1);
   const endDate = new Date();
 
-  return(
+  return (
     <Container>
       <div className="wrapper">
         <Heatmap
@@ -22,6 +22,6 @@ const RandomCalendar: React.FC = () => {
       </div>
     </Container>
   );
-}
+};
 
 export default RandomCalendar;

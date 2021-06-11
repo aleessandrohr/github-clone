@@ -1,37 +1,32 @@
-import 'react-calendar-heatmap/dist/styles.css';
+import "react-calendar-heatmap/dist/styles.css";
 
-import React, { useState } from 'react';
-import { BrowserRouter as Router, } from 'react-router-dom';
+import React, { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import { ThemeProvider } from 'styled-components';
-import { ThemeName, themes } from './styles/Themes';
+import { ThemeProvider } from "styled-components";
 
-import Header from './components/Header/index';
-import Routes from './pages/routes';
-import Footer from './components/Footer/index';
+import Footer from "./components/Footer/index";
+import Header from "./components/Header/index";
 
-// import { Container } from './styles';
-import GlobalStyles from './styles/GlobalStyles';
+import GlobalStyles from "./styles/GlobalStyles";
+import { ThemeName, themes } from "./styles/themes";
+
+import Routes from "./pages/routes";
 
 const App: React.FC = () => {
-
-  const [themeName, setThemeName] = useState<ThemeName>('light');
+  const [themeName, setThemeName] = useState<ThemeName>("light");
   const currentTheme = themes[themeName];
 
-  return(
+  return (
     <ThemeProvider theme={currentTheme}>
       <Router>
-
         <Header themeName={themeName} setThemeName={setThemeName} />
-
         <Routes />
-
         <Footer />
-
         <GlobalStyles />
       </Router>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

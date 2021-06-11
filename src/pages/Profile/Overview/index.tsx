@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { getRepository } from "../../../api/GitHub";
-
-import { APIRepository } from "../../../@types";
-
-import RepositoryCard from "../../../components/RepositoryCard/index";
-import RandomCalendar from "../../../components/RandomCalendar/index";
 import Error404 from "../../../components/Error404/index";
+import RandomCalendar from "../../../components/RandomCalendar/index";
+import RepositoryCard from "../../../components/RepositoryCard/index";
+
+import { getRepository } from "../../../api/github";
+
+import { APIRepository } from "../../../types";
 
 import { Container, Repositories, CalendarHeading } from "./styles";
 
@@ -17,17 +17,16 @@ interface Data {
 }
 
 const Overview: React.FC = () => {
-
   const [data, setData] = useState<Data>();
   const { username } = useParams();
 
   useEffect(() => {
     const get = async () => {
-      let repository = await getRepository(username);
+      const repository = await getRepository(username);
+
       if (repository === `Error 404`) {
         setData({ error: true });
       } else {
-
         const shuffledRepository = repository.sort(() => 0.5 - Math.random());
         const slicedRepository = shuffledRepository.slice(0, 6);
 

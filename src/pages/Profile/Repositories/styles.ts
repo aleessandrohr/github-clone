@@ -1,8 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Container = styled.div`
-  
-`;
+export const Container = styled.div``;
 
 export const Repositories2 = styled.div`
   margin-top: var(--verticalPadding);

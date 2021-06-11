@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub } from "react-icons/fa";
+
+import styled from "styled-components";
 
 export const Container = styled.footer`
   display: flex;
