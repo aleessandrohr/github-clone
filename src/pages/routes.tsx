@@ -10,7 +10,7 @@ import Repositories from "./Profile/Repositories/index";
 const Pages: React.FC = () => {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/alessandroramos13" />} />
+      <Route path="/" element={<Navigate to="/aleessandrohr" />} />
       <Route path="/:username" element={<Profile />}>
         <Route path="/" element={<Overview />} />
         <Route path="/repositories" element={<Repositories />} />
